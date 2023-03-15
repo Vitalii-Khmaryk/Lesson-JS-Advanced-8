@@ -1,0 +1,40 @@
+<div class="d-flex">
+  <div class="flex-column" aria-orientation="vertical">
+    <button
+      class="mybtn"
+      [routerLink]="['action']"
+      routerLinkActive="actives"
+      type="button"
+    >
+      Акції
+    </button>
+    <button
+      class="mybtn"
+      [routerLink]="['category']"
+      routerLinkActive="actives"
+      type="button"
+    >
+      Категорї
+    </button>
+    <button
+      class="mybtn"
+      [routerLink]="['tovar']"
+      routerLinkActive="actives"
+      type="button"
+    >
+      Товари
+    </button>
+    <button
+      class="mybtn"
+      [routerLink]="['zamovlena']"
+      routerLinkActive="actives"
+      type="button"
+    >
+      Замовлення
+    </button>
+    <button class="exit" [routerLink]="['/']">Вихід</button>
+  </div>
+  <div class="w-100">
+    <router-outlet></router-outlet>
+  </div>
+</div>

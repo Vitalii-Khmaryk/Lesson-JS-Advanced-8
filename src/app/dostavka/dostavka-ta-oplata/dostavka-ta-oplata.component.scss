@@ -1,0 +1,162 @@
+.actions-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 35px;
+    border-radius: 4px;
+    border-top: 5px solid aqua;
+    font-family: "RotondaC";
+  }
+}
+.twobox {
+  margin-top: 30px;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.central {
+  margin: 0 auto;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.box1 {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.text {
+  font-family: "RotondaC";
+  h2 {
+    color: #27ae60;
+    font-size: 26px;
+    text-align: center;
+  }
+  p {
+    color: #5a5a5a;
+    text-align: center;
+    span {
+      font-weight: bold;
+      color: #27ae60;
+    }
+  }
+}
+.box2 {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.text2 {
+  font-family: "RotondaC";
+  h2 {
+    color: #f2c94c;
+    font-size: 26px;
+    text-align: center;
+  }
+  p {
+    color: #5a5a5a;
+    text-align: center;
+    span {
+      font-weight: bold;
+      color: #f2c94c;
+    }
+  }
+}
+.map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  font-family: "RotondaC";
+  width: 100%;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #5a5a5a;
+  &-text {
+    width: 54%;
+    height: 140px;
+  }
+}
+.oplata {
+  font-family: "RotondaC";
+  text-align: center;
+  margin-top: 40px;
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.icons {
+  width: 100%;
+  font-family: "RotondaC";
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  .d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60%;
+    width: 55%;
+  }
+}
+
+.gotivka {
+  border-right: 1px solid aqua;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  p {
+    color: gray;
+  }
+}
+.bezgotivka {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  p {
+    color: gray;
+  }
+}
+.pay {
+  background-color: aqua;
+  border-radius: 12px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.w-100 {
+  width: 100%;
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center {
+  width: 65%;
+  height: 60%;
+  background-color: white;
+  font-family: "RotondaC";
+  color: #5a5a5a;
+  font-size: 18px;
+}

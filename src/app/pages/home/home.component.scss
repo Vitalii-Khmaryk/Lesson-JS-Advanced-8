@@ -1,0 +1,97 @@
+.baner {
+  width: 100%;
+  height: 500px;
+  background-color: black;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "RotondaC";
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+}
+.blue {
+  color: aqua;
+}
+.after-baner {
+  width: 100%;
+  height: 150px;
+  background-color: #b5d8f7;
+  background-image: url(https://monosushi.com.ua/wp-content/themes/monosushi/img/bg-monosushi-logo.svg),
+    url(https://monosushi.com.ua/wp-content/themes/monosushi/img/bg-monosushi-logo.svg);
+  background-position: 0 0, 190px -52px;
+  display: flex;
+  font-family: "RotondaC";
+}
+.column {
+  width: 34%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 120px;
+    height: 90px;
+  }
+}
+
+.mini-column {
+  height: 80%;
+  width: 80%;
+  border-right: 1px solid white;
+  display: flex;
+  align-items: center;
+}
+.zonaBtn {
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+  width: 200px;
+  height: 60px;
+  border: 1px solid white;
+  font-weight: bold;
+  transition: background-color 0.6s;
+}
+.zonaBtn:hover {
+  background-color: transparent;
+}
+.text {
+  font-size: 18px;
+  font-weight: 400;
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+.maker {
+  border-right: 1px solid transparent;
+}
+.btn-det {
+  background-color: aqua;
+  width: 160px;
+  height: 50px;
+  color: black;
+  border-radius: 8px;
+  border: 1px solid aqua;
+  font-weight: bold;
+  font-size: 15px;
+  transition: background-color 0.7s;
+}
+.btn-det:hover {
+  background-color: white;
+  box-shadow: 0 0 5px aqua;
+}
+.inner-baner {
+  align-self: center;
+}
+.inner-baner p {
+  font-weight: 400;
+}
+.inner-baner2 img {
+  border-radius: 2px;
+  animation: scale 5s infinite;
+}
+@keyframes scale {
+  50% {
+    transform: scale(1.1);
+  }
+}

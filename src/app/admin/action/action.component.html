@@ -1,0 +1,101 @@
+<button class="addAction" (click)="hider()">ДОДАТИ АКЦІЮ</button>
+<ng-container *ngIf="!hide">
+  <form [formGroup]="actionForm" (ngSubmit)="addAction()">
+    <input
+      type="text"
+      class="inp"
+      formControlName="name"
+      name="name"
+      placeholder="*Назва"
+      [ngClass]="actionForm.controls['name'].errors?.['required'] ? 'red':'blue'"
+    />
+
+    <input
+      type="text"
+      class="inp"
+      formControlName="title"
+      style="margin-left: 10px"
+      name="title"
+      placeholder="*Заголовок"
+      [ngClass]="actionForm.controls['title'].errors?.['required'] ? 'red':'blue'"
+    />
+    <br />
+    <textarea
+      name="description"
+      formControlName="description"
+      cols="30"
+      rows="10"
+      placeholder="*Опис"
+      [ngClass]="actionForm.controls['description'].errors?.['required'] ? 'red':'blue'"
+    ></textarea>
+    <br />
+    <ng-container *ngIf="!isUploaded">
+      <input
+        type="file"
+        formControlName="imagePath"
+        name="imagePath"
+        (change)="upload($event)"
+      />
+      <div
+        class="progress"
+        role="progressbar"
+        aria-label="Basic example"
+        aria-valuenow="0"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        <div class="progress-bar" [style.width.%]="uploadPercent"></div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="isUploaded">
+      <img [src]="valueByControl('imagePath')" alt="..." />
+      <button type="button" class="btnDel" (click)="deleteImage()">
+        Видалити зображення
+      </button>
+    </ng-container>
+    <br />
+    <button
+      type="submit"
+      class="addAction"
+      [disabled]="actionForm.invalid"
+      style="margin-top: 5px"
+    >
+      {{ editStatus ? "Зберегти" : "Додати" }}
+    </button>
+  </form>
+</ng-container>
+
+<ng-container *ngIf="hide">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Дата</th>
+        <th>Назва</th>
+        <th>Заголовок</th>
+        <th>Опис</th>
+        <th>Картинка</th>
+        <th>Дії</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let action of adminActions" style="font-family: 'RotondaC';">
+        <td class="gray">{{ action.date | date : "dd.MM.YYYY" }}</td>
+        <td class="gray">{{ action.name }}</td>
+        <td style="color: black;">{{ action.title }}</td>
+        <td class="gray">
+          {{ action.description | slice : 0 : 60
+          }}<span *ngIf="action.description.length > 20">...</span>
+        </td>
+        <td><img [src]="action.imagePath" height="50px" /></td>
+        <td class="flexbtn">
+          <button type="button" (click)="editAction(action)" class="btn">
+            Редагувати
+          </button>
+          <button type="button" (click)="deleteAction(action)" class="btn">
+            Видалити
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ng-container>

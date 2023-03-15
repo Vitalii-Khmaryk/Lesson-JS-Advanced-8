@@ -1,0 +1,88 @@
+<button class="addAction" (click)="hider()">ДОДАТИ КАТЕГОРІЮ</button>
+<ng-container *ngIf="!hide">
+  <form [formGroup]="categoryForm" (ngSubmit)="addCategory()">
+    <input
+      type="text"
+      class="inp"
+      formControlName="name"
+      name="name"
+      placeholder="*Назва"
+      [ngClass]="categoryForm.controls['name'].errors?.['required'] ? 'red':'blue'"
+    />
+
+    <input
+      type="text"
+      class="inp"
+      formControlName="path"
+      style="margin-left: 10px"
+      name="path"
+      placeholder="*Шлях"
+      [ngClass]="categoryForm.controls['path'].errors?.['required'] ? 'red':'blue'"
+    />
+    <br />
+
+    <ng-container *ngIf="!isUploaded">
+      <input
+        type="file"
+        formControlName="imagePath"
+        name="imagePath"
+        (change)="upload($event)"
+      />
+      <div
+        class="progress"
+        role="progressbar"
+        aria-label="Basic example"
+        aria-valuenow="0"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        <div class="progress-bar" [style.width.%]="uploadPercent"></div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="isUploaded">
+      <img [src]="valueByControl('imagePath')" alt="..." />
+      <button type="button" class="btnDel" (click)="deleteImage()">
+        Видалити зображення
+      </button>
+    </ng-container>
+    <br />
+    <button
+      type="submit"
+      class="addAction"
+      [disabled]="categoryForm.invalid"
+      style="margin-top: 5px"
+    >
+      {{ editStatus ? "Зберегти" : "Додати" }}
+    </button>
+  </form>
+</ng-container>
+
+<ng-container *ngIf="hide">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>№</th>
+        <th>Назва</th>
+        <th>Шлях</th>
+        <th>Картинка</th>
+        <th>Дії</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let category of adminCategories" style="font-family: 'RotondaC';">
+        <td class="gray">№ {{category.id}}</td>
+        <td class="gray">{{ category.name }}</td>
+        <td class="gray">{{ category.path }}</td>
+        <td><img [src]="category.imagePath" height="50px" /></td>
+        <td class="flexbtn">
+          <button type="button" (click)="editCategory(category)" class="btn">
+            Редагувати
+          </button>
+          <button type="button" (click)="deleteCategory(category)" class="btn">
+            Видалити
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ng-container>

@@ -1,0 +1,114 @@
+.addAction{
+    background-color: aqua;
+    font-weight: bold;
+    color: black;
+    border: 1px solid aqua;
+    border-radius: 9px;
+    width: 240px;
+    height: 60px;
+    font-family: 'RotondaC';
+    font-size: 19px;
+    cursor: pointer;
+}
+.addAction:hover{
+    background-color: white;
+}
+.btn{
+    color: aqua;
+    background-color: white;
+    border: 1px solid white;
+    font-family: 'RotondaC';
+    font-size: 19px;
+    cursor: pointer;
+}
+.btn:hover{
+    text-decoration: underline;
+}
+
+table{
+    margin: 20px 10px;
+    width: 98%;
+    border-collapse: collapse;
+}
+thead{
+    border-bottom: 3px solid aqua;
+    height: 50px;
+    font-family: 'RotondaC';
+    font-size: 16px;
+    color: gray;
+    font-weight:100;
+}
+tr,td,th{
+    border-bottom: 1px solid rgb(185, 156, 156);
+}
+
+th{
+    padding-right: 150px;
+}
+td{
+    padding: 10px 10px;
+}
+.flexbtn{
+    display: flex;
+    flex-direction: column;
+    border-bottom:1px solid white;
+}
+.inp{
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 400px;
+    height: 60px;
+    padding: 20px 20px;
+    margin: 20px 0;
+}
+
+.red {
+    box-shadow: 0 0 10px red;
+    border: 1px solid red;
+}
+.blue{
+    border: 1px solid blue;
+    box-shadow: 0 0 10px blue;
+}
+.progress{
+    margin-top: 10px;
+    display: flex;
+    height: 20px;
+    width: 300px;
+    overflow: hidden;
+    font-size: 20px;
+    border: 1px solid gray;
+    background-color: wheat;
+    border-radius: 9px;
+}
+
+.progress-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    color: red;
+    text-align: center;
+    white-space: nowrap;
+    background-color: blue;
+    transition: width 0.5s;
+}
+.btnDel{
+    color: black;
+    font-weight: bold;
+    background-color: aqua;
+    border: 1px solid aqua;
+    font-family: 'RotondaC';
+    font-size: 15px;
+    border-radius: 6px;
+    height: 30px;
+    cursor: pointer;
+}
+.btnDel:hover{
+    background-color: red;
+}
+.gray{
+    color: gray;
+    font-family: 'RotondaC';
+    font-size: 14px;
+}
